@@ -1,0 +1,28 @@
+# Go build output
+/hello-world
+/zero
+*.exe
+*.dll
+*.so
+*.dylib
+/bin/
+/dist/
+
+# Go test and profiling output
+*.test
+coverage.out
+*.prof
+
+# Local environment and logs
+.env
+.env.*
+!.env.example
+!.env.sample
+*.log
+/logs/
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
