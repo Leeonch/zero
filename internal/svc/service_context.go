@@ -4,7 +4,7 @@
 package svc
 
 import (
-	"example.com/hello-world/internal/config"
+	"example.com/iam-service/internal/config"
 )
 
 type ServiceContext struct {

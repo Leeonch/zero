@@ -6,9 +6,9 @@ package logic
 import (
 	"context"
 
-	"example.com/hello-world/internal/svc"
-	"example.com/hello-world/internal/types"
-	"example.com/hello-world/user"
+	"example.com/iam-service/internal/svc"
+	"example.com/iam-service/internal/types"
+	"example.com/iam-service/user"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

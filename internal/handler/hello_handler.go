@@ -6,8 +6,8 @@ package handler
 import (
 	"net/http"
 
-	"example.com/hello-world/internal/logic"
-	"example.com/hello-world/internal/svc"
+	"example.com/iam-service/internal/logic"
+	"example.com/iam-service/internal/svc"
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 

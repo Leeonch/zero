@@ -1,8 +1,11 @@
-module example.com/hello-world
+module example.com/iam-service
 
 go 1.27.0
 
-require github.com/zeromicro/go-zero v1.10.3
+require (
+	github.com/zeromicro/go-zero v1.10.3
+	google.golang.org/grpc v1.80.0
+)
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
@@ -46,7 +49,6 @@ require (
 	golang.org/x/text v0.34.0 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20260128011058-8636f8732409 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260128011058-8636f8732409 // indirect
-	google.golang.org/grpc v1.80.0 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
