@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"flag"
 	"net"
 	"net/http"
@@ -24,7 +25,12 @@ func main() {
 	var cfg config.Config
 	conf.MustLoad(*configFile, &cfg)
 
-	serviceContext := svc.NewServiceContext(cfg)
+	serviceContext, err := svc.NewServiceContext(context.Background(), cfg)
+	logx.Must(err)
+	if serviceContext.DB != nil {
+		defer serviceContext.DB.Close()
+		logx.Info("Connected to MySQL")
+	}
 	httpServer := rest.MustNewServer(cfg.RestConf)
 	defer httpServer.Stop()
 	httpServer.AddRoute(rest.Route{
